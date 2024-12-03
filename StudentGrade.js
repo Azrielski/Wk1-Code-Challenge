@@ -1,3 +1,4 @@
+//function declared first
 function getstudentGrade(studentMarks){
     if(studentMarks > 79){
         return "A"
