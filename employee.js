@@ -1,4 +1,5 @@
 const readline = require('readline-sync');
+
 // Function to calculate PAYE tax 
 function calculatePAYE(grossSalary) {
     let tax = 0;
@@ -39,7 +40,7 @@ function calculateNHIF(grossSalary) {
     } else if (grossSalary <= 39999) {
         nhif = 950;
     } else {
-        nhif = 0; // If salary is out of the expected range, return 0 instead of logging an error
+        nhif = 1000; //  for salaries above 40,000(example value)
     }
 
     return nhif;
@@ -65,24 +66,25 @@ function calculateNSSF(grossSalary) {
 function calculateNetSalary(basicSalary, benefits) {
     let grossSalary = basicSalary + benefits;
 
+    // Calculate PAYE, NHIF, and NSSF
     let paye = calculatePAYE(grossSalary);
     let nhif = calculateNHIF(grossSalary);
     let nssf = calculateNSSF(grossSalary);
 
+    // Calculate net salary
     let netSalary = grossSalary - (paye + nhif + nssf);
 
     // Output the results
-    console.log(`Gross Salary: ${grossSalary.toFixed(2)}`);
-    console.log(`PAYE Tax: ${paye.toFixed(2)}`);
-    console.log(`NHIF Deductions: ${nhif.toFixed(2)}`);
-    console.log(`NSSF Deductions: ${nssf.toFixed(2)}`);
-    console.log(`Net Salary: ${netSalary.toFixed(2)}`);
+    console.log(`Gross Salary: Ksh ${grossSalary.toFixed(2)}`);
+    console.log(`PAYE Tax: Ksh ${paye.toFixed(2)}`);
+    console.log(`NHIF Deductions: Ksh ${nhif.toFixed(2)}`);
+    console.log(`NSSF Deductions: Ksh ${nssf.toFixed(2)}`);
+    console.log(`Net Salary: Ksh ${netSalary.toFixed(2)}`);
 }
 
-// Example input
-const name = readline.question('What is your Salary');
-console.log(`Updated Salary : ${name}`)
-let basicSalary = 25000; 
-let benefits = 5000;     
+// Prompt user for basic salary and benefits
+const basicSalary = parseFloat(readline.question('Enter your Basic Salary: '));
+const benefits = parseFloat(readline.question('Enter your Benefits: '));
 
+console.log(`Calculating salary details for a gross salary of Ksh ${basicSalary + benefits}`);
 calculateNetSalary(basicSalary, benefits);
