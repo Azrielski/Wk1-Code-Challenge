@@ -1,9 +1,10 @@
-WEEK 1 CODE CHALLENGE
+### WEEK 1 CODE CHALLENGE
+
 In this repo you will find 1 folder by the name node_modules, and 6 files: README.MD,--- StudentGrade.js, ---employee.js, ---package.js,--- package-lock.json, --- speedcheck.js.
 
 inside the node_modules folder , you will find folders that involve the prompt-sync, readline-sync and readline packages that are required to be installed inorder to run the programs needed.
 
-//Net Salary Calculator
+## Net Salary Calculator
 This is a simple Net Salary Calculator program written in JavaScript. It calculates the net salary of an individual based on their basic salary, benefits, and statutory deductions in Kenya, including:
 
 PAYE (Pay-As-You-Earn) Tax
@@ -11,11 +12,11 @@ NHIF (National Hospital Insurance Fund) Deductions
 NSSF (National Social Security Fund) Deductions
 The program uses the following input from the user:
 
-*Basic Salary
+## Basic Salary
 Benefits (e.g., allowances)
 The calculator outputs:
 
-*Gross Salary
+## Gross Salary
 PAYE Tax
 NHIF Deductions
 NSSF Deductions
@@ -33,7 +34,7 @@ Your Basic Salary
 Your Benefits
 The program will calculate and display your net salary along with detailed deductions.
 
-*How the Program Works
+## How the Program Works
 1. PAYE Calculation
 The PAYE tax rates are applied based on the gross salary:
 
@@ -80,10 +81,10 @@ npm install readline-sync
 
 
 
-//Speed Checker with Demerit Points
+### Speed Checker
 This is a simple Speed Checker program written in JavaScript. The program evaluates a car's speed, checks if it exceeds the speed limit, and calculates demerit points if necessary. If the demerit points reach a specific threshold, the program also determines whether the driver's license should be suspended.
 
-*Features
+## Features
 Speed Evaluation:
 
 Checks if the car's speed is within the allowed limit (default: 70 km/h).
@@ -107,7 +108,7 @@ Copy code
 node speedChecker.js
 Enter the car's speed when prompted.
 
-*Input and Output
+## Input and Output
 
 Input:
 The user is prompted to input the car's speed (as a number).
@@ -154,7 +155,7 @@ Enter car speed: fast
 Output:
 Please enter a valid number for speed.
 
-*How the Program Works
+## How the Program Works
 The program uses a constant speed limit of 70 km/h.
 If the car's speed is:
 Less than or equal to 70 km/h: Displays "OK".
@@ -177,12 +178,12 @@ npm install readline-sync.
 
 
 
-//Student Grade Calculator
+### Student Grade Calculator
 This is a simple Student Grade Calculator program written in JavaScript. The program takes the marks of a student as input (ranging between 0 and 100) and assigns a corresponding grade based on predefined grading criteria.
 
-*Features
+## Features
 
-*Grading System:
+## Grading System:
 Accepts student marks as input.
 Determines the grade based on the following criteria:
 A: Marks greater than 79
@@ -258,10 +259,9 @@ Output:
 
 The calculated grade is printed to the console.
 
-License
+## License
 This project is open source and free to use.
 
-Author
-Developed by Victor Azriel Ngae.
+## Developed by Victor Azriel Ngae.
 
 
